@@ -1,13 +1,15 @@
-import github from"../assets/github.svg"
-import gmail from"../assets/gmail.svg"
+
+import github from "../assets/github.svg";
+import gmail from "../assets/gmail.svg";
+
 function Footer() {
   return (
-    <footer className="border-t border-rose-400/20 bg-[#1A0710] px-6 py-10 text-white">
+    <footer className="border-t border-rose-400/20 bg-[#1A0710] px-4 py-8 text-white sm:px-6 sm:py-10">
 
       <div className="mx-auto max-w-6xl">
 
         {/* Footer Main */}
-        <div className="flex flex-row items-center justify-between gap-6 text-left">
+        <div className="flex flex-col items-center justify-between gap-8 text-center md:flex-row md:text-left">
 
           {/* Logo and Description */}
           <div>
@@ -24,16 +26,19 @@ function Footer() {
           </div>
 
           {/* Quick Links */}
-          <nav className="flex items-center gap-7 text-sm">
+          <nav className="flex flex-wrap items-center justify-center gap-4 text-sm sm:gap-7">
             <a href="#home" className="text-rose-100 transition hover:text-[#FB7185]">
               Home
             </a>
+
             <a href="#about" className="text-rose-100 transition hover:text-[#FB7185]">
               About
             </a>
+
             <a href="#projects" className="text-rose-100 transition hover:text-[#FB7185]">
               Projects
             </a>
+
             <a href="#contact" className="text-rose-100 transition hover:text-[#FB7185]">
               Contact
             </a>
@@ -51,13 +56,12 @@ function Footer() {
               <img src={github} alt="GitHub" width="30" height="30" />
             </a>
 
-
             <a
               href="mailto:koratrenish350@gmail.com"
               aria-label="Email"
               className="flex h-10 w-10 items-center justify-center rounded-full border border-rose-400/20 bg-[#451525] text-sm text-rose-100 transition hover:border-[#FB7185] hover:text-[#FB7185]"
             >
-              <img src={gmail} alt="GitHub" width="30" height="30" />
+              <img src={gmail} alt="Email" width="30" height="30" />
             </a>
           </div>
 
@@ -67,8 +71,7 @@ function Footer() {
         <div className="my-7 border-t border-rose-400/15" />
 
         {/* Copyright */}
-        <div className="flex flex-row items-center justify-between gap-3 text-sm text-rose-100/60">
-
+        <div className="flex flex-col items-center justify-between gap-3 text-center text-sm text-rose-100/60 sm:flex-row">
           <p>
             © {new Date().getFullYear()} Renish Korat. All rights reserved.
           </p>
@@ -79,7 +82,6 @@ function Footer() {
           >
             Back to Top ↑
           </a>
-
         </div>
 
       </div>

@@ -1,6 +1,7 @@
 
 import github from "../assets/github.svg";
 import Travel from "../assets/Travel.png";
+import Ecommarce from "../assets/ecommarce.png";
 import portfolio from "../assets/portfolio.png";
 
 function Projects() {
@@ -9,32 +10,32 @@ function Projects() {
       title: "E-Commerce Website",
       description:
         "A modern e-commerce website with a clean layout, product browsing, wishlist and shopping cart functionality.",
-      image: "/projects/ecommerce.png",
-      repository: "https://github.com/renishkorat",
-      demo: "#",
+      image: Ecommarce,
+      repository: "https://github.com/renishkorat/ecommerce",
+      demo: "https://ecommerce-gules-nu-73.vercel.app/",
     },
     {
       title: "Travel Planner",
       description:
         "A travel planning application to explore destinations, manage trips and save travel preferences using React.",
       image: Travel,
-      repository: "https://github.com/renishkorat/REACT-APP/tree/main/TRAVEL",
-      demo: "https://travel-planner-three-blue.vercel.app/",
+      repository: "https://github.com/renishkorat/TRAVEL",
+      demo: "https://travel-murex-pi.vercel.app/",
     },
     {
       title: "Portfolio Website",
       description:
         "A responsive personal portfolio showcasing my skills, projects and frontend development experience.",
       image: portfolio,
-      repository: "https://github.com/renishkorat",
-      demo: "https://renish-portfolio-phi-bice.vercel.app/",
+      repository: "https://github.com/renishkorat/PORTFOLIO",
+      demo: "https://portfolio-ten-henna-xkslf1xa1u.vercel.app/",
     },
   ];
 
   return (
     <section
       id="projects"
-      className="relative overflow-hidden bg-[#2B0A16]/30 px-6 py-20 text-white"
+      className="relative overflow-hidden bg-[#2B0A16]/30 px-4 py-14 text-white sm:px-6 sm:py-20"
     >
       {/* Background Glow */}
       <div className="absolute right-0 top-10 h-80 w-80 rounded-full bg-[#9F1239]/20 blur-[120px]" />
@@ -43,12 +44,13 @@ function Projects() {
       <div className="relative mx-auto max-w-6xl">
 
         {/* Section Heading */}
-        <h2 className="mb-12 text-center text-5xl font-bold">
+        <h2 className="mb-12 text-center text-4xl font-bold sm:text-5xl">
           My <span className="text-[#FB7185]">Projects</span>
         </h2>
 
         {/* Project Cards */}
-        <div className="grid grid-cols-3 items-stretch gap-6">
+        <div className="grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
           {projects.map((project) => (
             <div
               key={project.title}
@@ -77,12 +79,13 @@ function Projects() {
               </p>
 
               {/* Action Buttons */}
-              <div className="mt-auto flex items-center gap-3">
+              <div className="mt-auto flex flex-wrap items-center gap-3">
+
                 <a
                   href={project.repository}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-[#FB7185]/50 px-4 py-2 text-sm font-medium text-[#FB7185] transition hover:bg-[#FB7185] hover:text-[#2B0A16]"
+                  className="inline-flex items-center gap-2 rounded-full border border-[#FB7185]/50 px-3 py-2 text-sm font-medium text-[#FB7185] transition hover:bg-[#FB7185] hover:text-[#2B0A16] sm:px-4"
                 >
                   Repository
                   <img src={github} className="h-4 w-4" alt="GitHub" />
@@ -92,18 +95,19 @@ function Projects() {
                   href={project.demo}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#C026D3] to-[#FB7185] px-5 py-2 text-sm font-semibold text-white transition hover:brightness-110"
+                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#C026D3] to-[#FB7185] px-4 py-2 text-sm font-semibold text-white transition hover:brightness-110 sm:px-5"
                 >
                   Demo
                   <span className="flex h-4 w-4 items-center justify-center rounded-full bg-white text-[10px] text-[#9F1239]">
                     ▶
                   </span>
                 </a>
+
               </div>
             </div>
           ))}
-        </div>
 
+        </div>
       </div>
     </section>
   );

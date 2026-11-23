@@ -21,7 +21,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-[#2B0A16] px-6 py-20 text-white"
+      className="relative overflow-hidden bg-[#2B0A16] px-4 py-14 text-white sm:px-6 sm:py-20"
     >
       {/* Background Glow */}
       <div className="absolute left-0 top-10 h-72 w-72 rounded-full bg-[#9F1239]/20 blur-[110px]" />
@@ -31,60 +31,60 @@ function Contact() {
 
         {/* Heading */}
         <div className="mb-12 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#FB7185]">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#FB7185] sm:text-sm">
             Get In Touch
           </p>
 
-          <h2 className="text-5xl font-bold">
+          <h2 className="text-4xl font-bold sm:text-5xl">
             Contact <span className="text-[#FB7185]">Me</span>
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl leading-7 text-rose-100">
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-rose-100 sm:text-base">
             Have a project in mind or want to work together?
             Feel free to contact me. I'd love to hear from you!
           </p>
         </div>
 
         {/* Contact Layout */}
-        <div className="grid grid-cols-2 items-start gap-8">
+        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2">
 
           {/* Contact Info */}
-          <div className="rounded-2xl border border-rose-400/20 bg-[#451525] p-9">
-            <h3 className="mb-8 text-2xl font-bold">
+          <div className="rounded-2xl border border-rose-400/20 bg-[#451525] p-5 sm:p-7 lg:p-9">
+            <h3 className="mb-8 text-xl font-bold sm:text-2xl">
               Contact <span className="text-[#FB7185]">Info</span>
             </h3>
 
             <div className="space-y-5">
 
               {/* Location */}
-              <div className="flex items-center gap-4 rounded-xl border border-rose-400/10 bg-[#2B0A16] p-4">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#FB7185]/10 text-2xl text-[#FB7185]">
+              <div className="flex items-center gap-3 rounded-xl border border-rose-400/10 bg-[#2B0A16] p-3 sm:gap-4 sm:p-4">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#FB7185]/10 text-xl text-[#FB7185] sm:h-12 sm:w-12 sm:text-2xl">
                   📍
                 </span>
 
-                <div>
-                  <p className="mb-1 text-sm text-rose-200/60">
+                <div className="min-w-0">
+                  <p className="mb-1 text-xs text-rose-200/60 sm:text-sm">
                     Location
                   </p>
-                  <p className="font-medium text-rose-100">
+                  <p className="text-sm font-medium text-rose-100 sm:text-base">
                     Ahmedabad, Gujarat, India
                   </p>
                 </div>
               </div>
 
               {/* Phone */}
-              <div className="flex items-center gap-4 rounded-xl border border-rose-400/10 bg-[#2B0A16] p-4">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#FB7185]/10 text-2xl text-[#FB7185]">
+              <div className="flex items-center gap-3 rounded-xl border border-rose-400/10 bg-[#2B0A16] p-3 sm:gap-4 sm:p-4">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#FB7185]/10 text-xl text-[#FB7185] sm:h-12 sm:w-12 sm:text-2xl">
                   ☎
                 </span>
 
-                <div>
-                  <p className="mb-1 text-sm text-rose-200/60">
+                <div className="min-w-0">
+                  <p className="mb-1 text-xs text-rose-200/60 sm:text-sm">
                     Phone Number
                   </p>
                   <a
                     href="tel:+917984048969"
-                    className="font-medium text-rose-100 transition hover:text-[#FB7185]"
+                    className="text-sm font-medium text-rose-100 transition hover:text-[#FB7185] sm:text-base"
                   >
                     +91 79840 48969
                   </a>
@@ -92,20 +92,21 @@ function Contact() {
               </div>
 
               {/* Email */}
-              <div className="flex items-center gap-4 rounded-xl border border-rose-400/10 bg-[#2B0A16] p-4">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#FB7185]/10 text-2xl text-[#FB7185]">
+              <div className="flex items-center gap-3 rounded-xl border border-rose-400/10 bg-[#2B0A16] p-3 sm:gap-4 sm:p-4">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#FB7185]/10 text-xl text-[#FB7185] sm:h-12 sm:w-12 sm:text-2xl">
                   ✉
                 </span>
 
                 <div className="min-w-0">
-                  <p className="mb-1 text-sm text-rose-200/60">
+                  <p className="mb-1 text-xs text-rose-200/60 sm:text-sm">
                     Email Address
                   </p>
+
                   <a
                     href="https://mail.google.com/mail/?view=cm&fs=1&to=koratrenish350@gmail.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="break-all font-medium text-rose-100 transition hover:text-[#FB7185]"
+                    className="break-all text-sm font-medium text-rose-100 transition hover:text-[#FB7185] sm:text-base"
                   >
                     koratrenish350@gmail.com
                   </a>
@@ -118,9 +119,9 @@ function Contact() {
           {/* Contact Form */}
           <form
             onSubmit={handleSubmit}
-            className="rounded-2xl border border-rose-400/20 bg-[#451525] p-9"
+            className="rounded-2xl border border-rose-400/20 bg-[#451525] p-5 sm:p-7 lg:p-9"
           >
-            <h3 className="mb-6 text-2xl font-bold">
+            <h3 className="mb-6 text-xl font-bold sm:text-2xl">
               Send Me a <span className="text-[#FB7185]">Message</span>
             </h3>
 
@@ -132,6 +133,7 @@ function Contact() {
               >
                 Your Name
               </label>
+
               <input
                 id="contact-name"
                 name="name"
@@ -150,6 +152,7 @@ function Contact() {
               >
                 Your Email
               </label>
+
               <input
                 id="contact-email"
                 name="email"
@@ -168,6 +171,7 @@ function Contact() {
               >
                 Subject
               </label>
+
               <input
                 id="contact-subject"
                 name="subject"
@@ -186,6 +190,7 @@ function Contact() {
               >
                 Your Message
               </label>
+
               <textarea
                 id="contact-message"
                 name="message"

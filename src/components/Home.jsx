@@ -5,48 +5,51 @@ function Home() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[85vh] items-center overflow-hidden bg-gradient-to-br from-[#2B0A16] via-[#641E35] to-[#9F1239] px-8 py-16 text-white"
+      className="relative flex min-h-[85vh] items-center overflow-hidden bg-gradient-to-br from-[#2B0A16] via-[#641E35] to-[#9F1239] px-4 py-12 text-white sm:px-8 sm:py-16"
     >
       {/* Background Glow */}
       <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-[#FB7185]/15 blur-[100px]" />
 
-      <div className="relative mx-auto grid w-full max-w-6xl grid-cols-2 items-center gap-12">
+      <div className="relative mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2">
 
         {/* Left Content */}
-        <div>
+        <div className="text-center md:text-left">
+
           <p className="mb-4 inline-block rounded-full border border-rose-400/20 bg-[#2B0A16]/50 px-4 py-2 text-sm text-rose-100">
             Welcome to my portfolio
           </p>
 
-          <h1 className="text-5xl font-extrabold leading-tight">
+          <h1 className="text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
             Hi, I'm{" "}
             <span className="text-[#FB7185]">
               Renish Korat
             </span>
           </h1>
 
-          <h2 className="mt-4 text-3xl font-bold text-[#FDA4AF]">
+          <h2 className="mt-4 text-2xl font-bold text-[#FDA4AF] sm:text-3xl">
             Frontend Developer
           </h2>
 
-          <p className="mt-6 max-w-lg leading-7 text-rose-100">
+          <p className="mx-auto mt-6 max-w-lg text-sm leading-7 text-rose-100 sm:text-base md:mx-0">
             I'm a BSc.IT student passionate about creating modern,
             responsive and user-friendly websites using HTML5, CSS3,
             Tailwind CSS, Bootstrap and C language.
           </p>
 
           {/* Buttons */}
-          <div className="mt-8 flex gap-4">
+          <div className="mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
             <a
               href="#projects"
-              className="rounded-full border border-rose-400/40 px-6 py-3 font-semibold text-rose-100 transition hover:bg-[#451525]"
+              className="rounded-full border border-rose-400/40 px-5 py-3 text-sm font-semibold text-rose-100 transition hover:bg-[#451525] sm:px-6 sm:text-base"
             >
               View Projects ↗
             </a>
 
             <a
               href="https://github.com/renishkorat"
-              className="rounded-full border border-rose-400/40 px-6 py-3 font-semibold text-rose-100 transition hover:bg-[#451525]"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-rose-400/40 px-5 py-3 text-sm font-semibold text-rose-100 transition hover:bg-[#451525] sm:px-6 sm:text-base"
             >
               Git Hub ↗
             </a>
@@ -54,14 +57,15 @@ function Home() {
         </div>
 
         {/* Right Profile Design */}
-        <div className="flex justify-end">
-          <div className="relative flex h-80 w-80 items-center justify-center rounded-full border-2 border-[#FB7185]/60 bg-[#451525] shadow-[0_0_55px_rgba(251,113,133,0.3)]">
+        <div className="flex justify-center md:justify-end">
+          <div className="relative flex h-64 w-64 items-center justify-center rounded-full border-2 border-[#FB7185]/60 bg-[#451525] shadow-[0_0_55px_rgba(251,113,133,0.3)] sm:h-80 sm:w-80">
+
             <div className="absolute inset-3 rounded-full border border-dashed border-rose-400/40" />
 
             <img
               src={renish}
               alt="Renish Korat"
-              className="h-64 w-64 rounded-full object-cover"
+              className="h-52 w-52 rounded-full object-cover sm:h-64 sm:w-64"
             />
 
             <span className="absolute -right-2 top-8 rounded-full border border-rose-400/30 bg-[#2B0A16] px-3 py-2 text-xs font-bold text-[#FB7185]">
@@ -75,6 +79,7 @@ function Home() {
             <span className="absolute -bottom-2 right-5 rounded-full border border-rose-400/30 bg-[#2B0A16] px-3 py-2 text-xs font-bold text-[#FB7185]">
               Tailwind
             </span>
+
           </div>
         </div>
 

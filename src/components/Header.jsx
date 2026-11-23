@@ -16,7 +16,7 @@ function Header() {
   };
 
   const navClass = (name) =>
-    `block rounded-xl px-4 py-2.5 font-semibold transition-all duration-300 ${
+    `block rounded-xl px-3 py-2 text-sm font-semibold transition-all duration-300 sm:px-4 sm:py-2.5 sm:text-base ${
       activeLink === name
         ? "bg-gradient-to-r from-[#FB7185] to-[#FDA4AF] text-[#2B0A16] shadow-lg shadow-rose-500/30 ring-1 ring-rose-200/30"
         : "text-rose-100 hover:bg-[#451525] hover:text-[#FB7185]"
@@ -24,18 +24,20 @@ function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-rose-400/20 bg-[#2B0A16]/95 backdrop-blur-md">
-      <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-8">
+
+      <div className="relative mx-auto flex max-w-7xl items-center justify-center px-3 py-3 sm:px-6 sm:py-4 lg:px-8">
 
         {/* Logo */}
         <a
           href="#home"
           onClick={() => handleNavClick("Home")}
-          className="shrink-0 text-xl font-bold tracking-wide text-[#FB7185] sm:text-2xl"
+          className="absolute left-4 shrink-0 text-xl font-bold tracking-wide text-[#FB7185] sm:left-8 sm:text-2xl"
         >
           Portfolio <span className="text-rose-100">.</span>
         </a>
 
-        <nav className="absolute left-1/2 flex -translate-x-1/2 items-center gap-2 lg:gap-3">
+        {/* Navigation*/}
+        <nav className="flex flex-wrap items-center justify-center gap-1 sm:gap-2 lg:gap-3">
           {navLinks.map((item) => (
             <a
               key={item.name}

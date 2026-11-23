@@ -25,19 +25,19 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-rose-400/20 bg-[#2B0A16]/95 backdrop-blur-md">
 
-      <div className="relative mx-auto flex max-w-7xl items-center justify-center px-3 py-3 sm:px-6 sm:py-4 lg:px-8">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-3 px-3 py-3 sm:px-6 sm:py-4 lg:flex-row lg:gap-0 lg:px-8">
 
         {/* Logo */}
         <a
           href="#home"
           onClick={() => handleNavClick("Home")}
-          className="absolute left-4 shrink-0 text-xl font-bold tracking-wide text-[#FB7185] sm:left-8 sm:text-2xl"
+          className="text-xl font-bold tracking-wide text-[#FB7185] sm:text-2xl lg:absolute lg:left-8"
         >
           Portfolio <span className="text-rose-100">.</span>
         </a>
 
-        {/* Navigation*/}
-        <nav className="flex flex-wrap items-center justify-center gap-1 sm:gap-2 lg:gap-3">
+        {/* Navigation */}
+        <nav className="flex w-full flex-wrap items-center justify-center gap-1 sm:gap-2 lg:w-auto lg:gap-3">
           {navLinks.map((item) => (
             <a
               key={item.name}

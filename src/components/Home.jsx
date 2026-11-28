@@ -38,12 +38,14 @@ function Home() {
 
           {/* Buttons */}
           <div className="mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
-            <a
-              href="#projects"
-              className="rounded-full border border-rose-400/40 px-5 py-3 text-sm font-semibold text-rose-100 transition hover:bg-[#451525] sm:px-6 sm:text-base"
-            >
-              View Projects ↗
-            </a>
+           <a
+  href="Renish_Korat_Resume.pdf"
+  download="Renish_Korat_Resume"
+  className="rounded-full border border-rose-400/40 px-5 py-3 text-sm font-semibold text-rose-100 transition hover:bg-[#451525] sm:px-6 sm:text-base"
+>
+  <i className="fa-solid fa-download"></i>
+  Download Resume
+</a>
 
             <a
               href="https://github.com/renishkorat"
